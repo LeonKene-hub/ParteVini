@@ -12,7 +12,6 @@ import world from "../../assets/images/World.svg"
 import miniLike from "../../assets/images/Star.svg"
 import { ButtonEdit, ButtonLike, ButtonTrash } from "@/src/Components/Button"
 import { useEffect, useState } from "react"
-import Header from "@/src/Components/Header";
 
 
 function Publicacao() {
@@ -39,16 +38,7 @@ function Publicacao() {
 
     return (
         <>        
-        
-        {/* <Header /> */}
-
-        {/* section com fundo galaxia puxando do arquivo CSS */}
-            {/* <section className='sm:flex sm:justify-center h-full w-full'> */}
-
-                {/* div representa modal branco */}
-                <div className=' bg-white mx-9 my-12 px-5 py-3 rounded-lg sm:py-5 sm:px-10 sm:w-[50%] sm:flex sm:flex-col sm:items-center'>
-
-                    {/* organiza infos do perfil, data e "X" de fechamento da publicacao */}
+            {/* organiza infos do perfil, data e "X" de fechamento da publicacao */}
                     <div className='w-full flex justify-between'>
 
                         {/* formata foto nome data do perfil */}
@@ -56,13 +46,13 @@ function Publicacao() {
                             {/* {innerWidth} */}
                             <Image
                                 src={userDefault}
-                                width={windowWidth > 375 ? 136 : 52}
-                                height={windowHeight > 375 ? 136 : 52}
+                                width={windowWidth > 375 ? 110 : 52}
+                                height={windowHeight > 375 ? 110 : 52}
                                 alt="foto de perfil do author da publicação"
                             />
                             <div className='flex flex-col justify-center ml-5'>
-                                <h1 className='text-black sm:text-2xl'>@User</h1>
-                                <p className='text-black sm:text-2xl'>21 july</p>
+                                <h1 className='text-black sm:text-2xl'>@Vinicius</h1>
+                                <p className='text-black sm:text-2xl'>06 de Outubro de 2024</p>
                             </div>
                         </div>
 
@@ -87,7 +77,7 @@ function Publicacao() {
 
 
                     {/* organiza icones */}
-                    <div className='flex justify-between mt-5 sm:justify-normal sm:gap-10'>
+                    <div className='w-full flex justify-around mt-5 sm:justify-start sm:gap-10'>
                         <ButtonLike styles={windowWidth >= 376 ? "w-[161px]" : "w-[50px]"}>
                             {windowWidth >= 376 ? 'Curtir' : ""}
                         </ButtonLike>
@@ -105,7 +95,7 @@ function Publicacao() {
                     <div className="gap-5 flex flex-col sm:flex-row-reverse sm:gap-10 sm:mt-24">
                         {/* detalhes da postagem */}
                         <div className='mt-7'>
-                            <h2 className='text-black'>Detalhes de Postagem</h2>
+                            <h2 className='text-black text-xl sm:text-3xl whitespace-nowrap'>Detalhes de Postagem</h2>
 
                             {/* formata so os icone com as labels do lado */}
                             <div className='mt-3'>
@@ -162,7 +152,7 @@ function Publicacao() {
                             </div>
                         </div>
                     </div>
-                </div>
+            
             {/* </section> */}
         </>
 

@@ -1,0 +1,68 @@
+/* Remove o fundo branco da camada externa */
+.modal-wrapper {
+    background-color: transparent; /* Faz o fundo da camada externa ser transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    overflow: hidden; /* Remove o scroll da camada externa */
+  }
+  
+  /* Mantém o fundo branco apenas na parte interna */
+  .modal-content {
+    background-color: white; /* Apenas a área interna fica com o fundo branco */
+    max-width: 70vw;
+    width: 100%; /* Adapta ao tamanho disponível */
+    max-height: ; /* Define um máximo para a altura */
+    height: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Remove o scroll interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .modal-body {
+    text-align: justify;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .modal-overlay {
+    display: flex;
+justify-content: center;
+  }
+
+  /* Media Query para telas menores */
+  @media (max-width: 768px) {
+    .modal-content {
+      max-width: 90vw;
+      max-height: 100%;
+      padding: 10px;
+    }
+  }
+  
